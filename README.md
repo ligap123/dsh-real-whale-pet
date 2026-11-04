@@ -34,13 +34,13 @@
 dsh plugin --profile <profile> add /绝对路径/dsh-real-whale-pet
 ```
 
-### 方式三：npm（上架后）
+### 方式三：npm（已发布 1.0.0）
 
 ```sh
 dsh plugin --profile <profile> add dsh-real-whale-pet
 ```
 
-也可以从 DSH 插件市场（dshmarket）搜索安装。npm 上尚无此包时，请用方式一或二。
+也可以从 DSH 插件市场（dshmarket）搜索安装（收录前用方式一/二/三）。npm 包地址：<https://www.npmjs.com/package/dsh-real-whale-pet>。
 
 ## 日常使用
 
