@@ -3,3 +3,8 @@ node_modules/
 *.tgz
 __pycache__/
 *.pyc
+# 凭据与恢复码：绝不入库
+npm_recovery_codes*
+*recovery*codes*.txt
+.npmrc
+npm-debug.log*
