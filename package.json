@@ -24,6 +24,14 @@
     "./package.json": "./package.json"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ligap123/dsh-real-whale-pet.git"
+  },
+  "homepage": "https://github.com/ligap123/dsh-real-whale-pet#readme",
+  "bugs": {
+    "url": "https://github.com/ligap123/dsh-real-whale-pet/issues"
+  },
   "os": [
     "win32"
   ],

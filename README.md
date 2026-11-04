@@ -3,6 +3,8 @@
 > 一只"真实到像标本"的座头鲸，静静地浮在 Windows 桌面上：它会呼吸、会鲸叫、会冷冷地吐槽你。戳它一下，整块屏幕突然变成水面——水纹、焦散、水花、色散从鲸鱼身上炸开。
 >
 > **DeepSeek Harness 插件**：Host-only bundle（不声明 `dsh.client`，不改 DSH 页面），由 DSH 的 Cordis 生命周期拉起一个自带的 Electron Helper 子进程来画桌面窗口。
+>
+> **非官方社区插件**：本项目由社区维护，与 DeepSeek 官方无关。
 
 ![透明鲸鱼桌宠](assets/preview/pet.png)
 
