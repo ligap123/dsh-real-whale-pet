@@ -1,0 +1,12 @@
+第三方来源与素材说明
+
+1. 项目代码以 MIT 许可证交付，见 LICENSE。
+2. 架构参考：本机 dsh-pet 0.3.8（https://github.com/PC2005-cloud/dsh-pet，MIT）提供的独立 Electron 窗口、进程探活和穿透设计经验；没有复制其代码、角色、动画或音频。
+3. dsh-whale-widget 仅用于核对原始需求中的工程描述，没有复制任何源码或美术、音效素材。
+4. 鲸鱼原图由用户提供（白背景下的座头鲸特写.png），用户应具有其使用权限。透明底由内置 imagegen 编辑生成，仅进行去背与素材整理。原图与生成素材的权利不因代码的 MIT 声明而自动改变。
+5. 去背提示词：仅删除白色背景，保持原鲸鱼完整、姿态与细节不变，保留白色腹部不透明，输出真实透明 RGBA，无水花、文字、阴影或新物体。具体原始提示词记录于 assets/素材来源.md。
+6. 水波、气泡、水滴在 helper/shared/sprites.js 中原创程序化绘制，每种只生成一张静态贴图，动画通过位移、缩放、旋转及透明度叠加完成；截图折射另用原创 WebGL 着色器。
+7. 所有 WAV 由 scripts/make-sfx.py 使用数学信号与固定种子噪声离线合成，无纪录片、影视或其他采样。
+8. Emoji 由用户系统字体显示；未随包分发字体或 emoji 图库。
+9. 运行依赖：jsonc-parser、@electron/get、@electron-internal/extract-zip 均为 MIT，以各依赖包内实际许可证为准。Electron 复用本机运行时，不随包分发二进制。
+10. 余额读取链路与 dsh-whale-widget 一致：由 DSH Host 进程通过 `credentials` / `deepseekAccount` 可选服务取数，经只监听本机回环、带随机 token 的桥接交给桌宠进程；手动填写 API Key 时才由本进程直连 https://api.deepseek.com/user/balance。只在主动刷新余额时发起请求，没有 LLM 调用、对话读取或遥测；首次缺少 Electron 时可能下载运行时。截图仅存内存，动画结束即释放，不写盘、不上传。

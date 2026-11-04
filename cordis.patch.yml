@@ -1,0 +1,4 @@
+# 将桌宠挂入 DSH 配置树。
+- insert:
+    - id: dsh-real-whale-pet
+      name: dsh-real-whale-pet

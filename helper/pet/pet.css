@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; user-select: none; font-family: "Microsoft YaHei", sans-serif; }
+body { --pet-height: 260px; }
+button { font: inherit; color: #f4fbff; border: 1px solid rgba(179,223,240,.24); background: rgba(8,27,44,.9); cursor: pointer; }
+#float { position: absolute; top: 150px; left: 48px; right: 48px; height: var(--pet-height); animation: float 7.3s ease-in-out infinite; }
+#breath { position: relative; width: 100%; height: 100%; transform-origin: 57% 48%; animation: breathe 4.6s ease-in-out infinite; }
+#whale { width: 100%; height: 100%; object-fit: fill; cursor: grab; filter: drop-shadow(0 12px 15px rgba(0,18,36,.19)); -webkit-user-drag: none; }
+body.dragging #whale { cursor: grabbing; }
+body.dragging #float { animation-play-state: paused; }
+#bubble { position: absolute; top: 30px; right: 44px; max-width: min(300px, calc(100% - 64px)); padding: 15px 19px; border-radius: 12px; font-size: 13px; line-height: 1.8; letter-spacing: .25px; text-align: left; box-shadow: 0 7px 24px #00132022; }
+#bubble::after { content: ""; position: absolute; bottom: -6px; right: 46px; width: 10px; height: 10px; transform: rotate(45deg); background: #0a2238; border-right: 1px solid #b3dff03d; border-bottom: 1px solid #b3dff03d; }
+/* 幽默挂件贴在鲸鱼身体的对应位置：男版在腹面后段（泄殖腔位置），女版在胸鳍后方腹面。
+   位置用鲸鱼图百分比表达，随窗口尺寸缩放；translate(-50%,-50%) 让 emoji 以锚点为中心。 */
+.accessory { position: absolute; transform: translate(-50%, -50%); font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif; font-size: calc(var(--pet-height) * .075); line-height: 1.15; padding: .05em .35em; border: 0; border-radius: 1em; background: rgba(8,27,44,.16); white-space: nowrap; text-shadow: 0 1px 2px rgba(0,18,36,.3); }
+#accessory-male { left: 42%; top: 66%; }
+#accessory-female { left: 63%; top: 54%; }
+#balance { position: absolute; bottom: 8px; right: 44px; padding: 4px 10px; border-radius: 20px; font-size: 10px; letter-spacing: .6px; color: #a7c7d4; background: rgba(8,27,44,.76); }
+#balance span { margin-left: 7px; color: #e1f4f7; }
+#missing { width: 100%; height: 100%; border-radius: 40%; }
+#drop { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+[hidden] { display: none !important; }
+@keyframes breathe { 0%, 100% { transform: scale(1,1); } 50% { transform: scale(1.006,1.012); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@media (prefers-reduced-motion: reduce) { #float, #breath { animation: none; } }

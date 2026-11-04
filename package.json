@@ -1,0 +1,77 @@
+{
+  "name": "dsh-real-whale-pet",
+  "version": "1.0.0",
+  "description": "写实座头鲸桌宠：透明置顶鲸鱼、点击全屏水波折射、本地鲸歌与 121 条冷面台词。 · Realistic humpback whale desktop pet: transparent always-on-top overlay, click-triggered full-screen water ripple with screen refraction, local whale songs and 121 dry one-liners.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "desktop-pet",
+    "whale",
+    "humpback",
+    "electron",
+    "windows"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "icon": "assets/icon.png",
+  "exports": {
+    ".": "./index.js",
+    "./icon": "./assets/icon.png",
+    "./locale/*.json": "./locale/*.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=22.12.0",
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.5": "compatible"
+      }
+    }
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "helper/",
+    "assets/",
+    "locale/",
+    "cordis.patch.yml",
+    "screenshots.json",
+    "README.md",
+    "使用说明.md",
+    "验收记录.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "start": "node scripts/dev-helper.mjs",
+    "ensure:electron": "node scripts/ensure-electron.mjs",
+    "make:sfx": "python scripts/make-sfx.py",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:electron": "node scripts/electron-test.mjs",
+    "test:host": "node tests/host-smoke.mjs",
+    "prepack": "npm run check && npm test"
+  },
+  "dependencies": {
+    "@electron/get": "^5.1.0",
+    "@electron-internal/extract-zip": "^1.0.5",
+    "jsonc-parser": "^3.3.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

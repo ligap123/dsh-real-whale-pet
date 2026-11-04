@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'"><title>鲸鱼 · 余额与挂件</title><link rel="stylesheet" href="panel.css"></head>
+<body><main>
+  <div class="eyebrow">DEEP WATER / DEEPSEEK</div><h1>海里有鲸，账上有数。</h1><p class="intro">查看账户余额，顺便给鲸鱼选一个小挂件。</p>
+  <section><div class="label">DEEPSEEK 账户余额</div><div id="amount">尚未查询</div><div id="details">留空直接刷新，或用 API Key 覆盖。</div>
+    <form id="balance-form"><label for="key">API Key（可选）</label><div class="key-row"><input id="key" type="password" placeholder="可留空 · 读 DSH 账号余额" autocomplete="off" spellcheck="false" maxlength="220"><button id="refresh" type="submit">刷新余额</button></div></form>
+    <div class="meta">留空时走 DSH 的账号登录态（或 DSH 已配置的 DEEPSEEK_API_KEY）；填入 Key 则用该 Key 直连官方接口，并用系统加密保存在本机。</div><button id="forget" class="text-button">删除已保存密钥</button>
+    <p id="status" role="status"></p>
+  </section>
+  <section><div class="label">幽默挂件</div><div class="choices" role="group" aria-label="选择幽默挂件">
+    <button data-style="off">关闭<span>保持高冷</span></button><button data-style="male">🥚🍆🥚<span>男版</span></button>
+    <button data-style="female">🌏🌏<span>女版</span></button><button data-style="both">都喜欢<span>两个都加</span></button>
+  </div><p class="meta">只改变 emoji 挂件，鲸鱼仍然负责发呆。</p></section>
+  <section><div class="label">音效音量</div>
+    <div class="volume-row"><input id="volume" type="range" min="0" max="100" step="5" aria-label="音效音量"><span id="volume-value">30%</span></div>
+    <button id="mute" class="text-button" aria-pressed="false">静音</button>
+    <p class="meta">只影响鲸鱼自己的音效，改完立即生效；右键菜单也有 5%–100% 的档位。</p>
+  </section>
+  <footer>写实座头鲸 1.0.0 · 本地桌宠</footer>
+</main><script src="panel.js"></script></body></html>

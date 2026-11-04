@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  // 鲸鱼高度为 DIP，位置和大小随屏幕工作区域约束。
+  "pet": {
+    "enabled": true, "size": 260, "corner": "bottom-right",
+    "marginX": 36, "marginY": 36, "alwaysOnTop": true, "introEffect": true
+  },
+  // 电影级只在点击时截图，截图仅在内存存活，结束即释放。
+  "fx": {
+    "mode": "cinematic", "rippleDurationMs": 2200, "captureScreen": true,
+    "multiDisplay": "all", "prewarmOverlay": true
+  },
+  "audio": {
+    // masterVolume 为 0–1 的线性音量；默认 0.3，可在面板滑杆或右键菜单调整。
+    "enabled": true, "masterVolume": 0.3, "idleSounds": true,
+    "idleMinSec": 30, "idleMaxSec": 120, "rareAirhorn": true, "ambient": false
+  },
+  "speech": {
+    "enabled": true, "idleMinSec": 90, "idleMaxSec": 240,
+    "clickChance": 0.35, "rippleChance": 0.7, "displayMs": 6000, "maxChain": 3
+  },
+  // 幽默挂件只使用 emoji：off / male / female / both。
+  "accessory": { "style": "off" },
+  "advanced": {
+    // 修改硬件加速选项后重启桌宠。
+    "disableHardwareAcceleration": false, "logLevel": "info", "holdToMuteMinutes": 30
+  }
+}

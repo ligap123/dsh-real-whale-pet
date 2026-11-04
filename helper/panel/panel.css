@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #eaf5f9; background: #0a1724; font-family: "Microsoft YaHei", sans-serif; font-size: 12px; }
+main { padding: 24px 30px; }
+.eyebrow { font-size: 9px; letter-spacing: 2.4px; color: #7da3b5; }
+h1 { font-size: 23px; font-weight: 500; letter-spacing: -.5px; margin: 16px 0 10px; }
+.intro { color: #8da7b4; margin-bottom: 20px; }
+section { padding: 18px 0 14px; border-top: 1px solid #243645; }
+.label { color: #9bb6c4; letter-spacing: 1.4px; font-size: 10px; }
+#amount { margin: 14px 0 7px; font-size: 31px; font-variant-numeric: tabular-nums; letter-spacing: -.7px; }
+#details { color: #8da7b4; font-size: 11px; white-space: pre-line; line-height: 1.7; }
+form { margin-top: 18px; }
+label { display: block; margin-bottom: 8px; color: #a1bac6; }
+.key-row { display: flex; gap: 8px; }
+input { min-width: 0; flex: 1; padding: 10px; background: #101f2d; border: 1px solid #304858; border-radius: 6px; color: white; }
+button { font: inherit; cursor: pointer; border: 1px solid #304858; color: #d9edf5; background: #183347; border-radius: 6px; padding: 9px 13px; }
+button:hover { border-color: #8bbccc; }
+button:disabled { opacity: .5; cursor: wait; }
+button:focus-visible, input:focus-visible { outline: 2px solid #8ccbd9; outline-offset: 3px; }
+.meta { color: #7894a4; font-size: 10px; line-height: 1.8; margin-top: 10px; }
+.text-button { border: 0; background: transparent; padding: 9px 0 0; color: #9abac9; font-size: 10px; }
+#status { color: #b8dce7; min-height: 15px; font-size: 10px; margin-bottom: 0; }
+.choices { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 16px; }
+.choices button { font-size: 17px; padding: 12px 0; background: #101f2d; font-family: "Segoe UI Emoji", "Microsoft YaHei", sans-serif; }
+.choices button[data-style="both"], .choices button[data-style="off"] { font-size: 12px; }
+.choices button[aria-pressed="true"] { border-color: #a3d7df; background: #214252; }
+.choices span { display: block; margin-top: 6px; color: #8ca7b6; font-size: 10px; }
+.volume-row { display: flex; align-items: center; gap: 12px; margin-top: 15px; }
+.volume-row input[type="range"] { flex: 1; min-width: 0; padding: 0; background: transparent; border: 0; accent-color: #8ccbd9; }
+#volume-value { width: 44px; text-align: right; color: #d9edf5; font-variant-numeric: tabular-nums; }
+#mute[aria-pressed="true"] { color: #8ccbd9; }
+footer { color: #506c7d; font-size: 9px; margin-top: 10px; letter-spacing: 1px; }
